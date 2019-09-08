@@ -6,7 +6,27 @@
   </head>
   <body>
     <header>
-        <img src="img/logo.png">
+        <a class="logo"><img src="img/logo.svg"></a>
+        <form class="search" action="search" method="get">
+            <button type="submit">
+                <img src="img/search.svg">
+            </button>
+            <input name="search" type="search" placeholder="Поиск по сайту">
+        </form>
+        <a href="#"><img src="img/user.svg"><span>Войти</span></a>
+        <a href="#"><img src="img/compare.svg"><span>Сравнить</span></a>
+        <a href="#"><img src="img/cat.svg"><span>Корзина</span></a>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">каталог товаров<img src="img/plus.png"></a></li>
+                <li><a href="#">доставка</a></li>
+                <li><a href="#">гарантия</a></li>
+                <li><a href="#">контакты</a></li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <h1 class="h1">Купить селфи палку</h1>
+    </main>
   </body>
 </html>
