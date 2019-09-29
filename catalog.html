@@ -17,21 +17,29 @@
             </button>
             <input name="search" type="search" placeholder="Поиск по сайту">
           </form>
-          <a class="user-nav_login" href="#">Войти</a>
-          <a class="user-nav_compare" href="#">Сравнить</a>
-          <a class="user-nav_cart" href="#">Корзина</a>
+          <div class="user-nav_wrap">
+            <a class="user-nav_login" href="#">Валентин Петухов <span>Войти</span></a>
+            <a class="user-nav_compare" href="#">Сравнить</a>
+            <a class="user-nav_cart" href="#">Корзина</a>
+          </div>
         </div>
         <nav class="nav">
-          <ul>
+          <ul class="nav_list">
             <li class="nav_general"><a href="#">каталог товаров</a>
-              <ul class="nav_category">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Квадракоптеры</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
-              </ul>
+              <div class="nav_menu">
+                <ul class="nav_category">
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="#">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul class="nav_category">
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul>
+                <ul class="nav_category">
+                  <li><a href="#">Квадракоптеры</a></li>
+                </ul>
+              </div>
             </li>
             <li class="nav_general"><a href="#">доставка</a></li>
             <li class="nav_general"><a href="#">гарантия</a></li>
@@ -50,6 +58,63 @@
         <a href="index.html">Моноподы для селфи</a>
       </div>
       <div class="catalog_wrap">
+        <aside class="filters">
+          <h2>Фильтр:</h2>
+          <form>
+          <div class="filter-cost">
+            <h3>Стоимость</h3>
+          </div>
+          <div class="filter-color">
+            <h3>Цвет</h3>
+            <p>
+              <label>
+                <input type="checkbox" name="color" value="black" checked>
+                Черный
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" value="white">
+                Белый
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" value="blue" checked>
+                Синий
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" value="red" checked>
+                Красный
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" value="pink">
+                Розовый
+              </label>
+            </p>
+          </div>
+          <div class="filter-bluetooth">
+            <h3>Bluetooth</h3>
+            <p>
+              <label>
+                <input type="radio" name="bluetooth" value="est'" checked>
+                есть
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" name="Bluetooth" value="net">
+                нет
+              </label>
+            </p>
+          </div>
+          <button type="button" class="btn">показать</button>
+          </form>
+        </aside>
         <main class="main-catalog">
           <div class="sorting">
             <span class="sorting_name">Сортировка:</span>
@@ -63,24 +128,24 @@
               <a href="#"><img src="img/icon-up-dir.svg"></a>
             </div>
           </div>
-          <div class="products">
-            <figure class="products_item">
-              <figcaption class="products_item_name">Любительская селфи-палка <span>500 руб.</span></figcaption>
+          <ul class="products">
+            <li class="products_item">
               <img src="img/item-1.jpg" alt="Любительская селфи-палка">
-            </figure>
-            <figure class="products_item">
-              <figcaption class="products_item_name">Профессиональная селфи-палка <span>1500 руб.</span></figcaption>
+              <p class="products_wrap"><a href="#" class="products_item_name">Любительская селфи-палка</a><span>500 руб.</span></p>
+            </li>
+            <li class="products_item">
               <img src="img/item-2.jpg" alt="Профессиональная селфи-палка">
-            </figure>
-            <figure class="products_item">
-              <figcaption class="products_item_name">Непотопляемая селфи-палка <span>2500 руб.</span></figcaption>
+              <p class="products_wrap"><a href="#" class="products_item_name">Профессиональная <br>селфи-палка</a><span>1500 руб.</span></p>
+            </li>
+            <li class="products_item">
               <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка">
-            </figure>
-            <figure class="products_item">
-              <figcaption class="products_item_name">Селфи-палка «Следуй за мной» <span>4900 руб.</span></figcaption>
+              <p class="products_wrap"><a href="#" class="products_item_name">Непотопляемая селфи-палка</a><span>2500 руб.</span></p>
+            </li>
+            <li class="products_item">
               <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»">
-            </figure>
-          </div>
+              <p class="products_wrap"><a href="#" class="products_item_name">Селфи-палка «Следуй <br>за мной»</a><span>4900 руб.</span></p>
+            </li>
+          </ul>
           <ul class="pages-nav">
             <li><a href="#">назад</a> </li>
             <ul class="pages-nav_numbers">
@@ -91,63 +156,6 @@
             <li><a href="#">вперед</a> </li>
           </ul>
         </main>
-        <aside class="filters">
-      <h2>Фильтр:</h2>
-      <form>
-      <div class="filter-cost">
-        <h3>Стоимость</h3>
-      </div>
-      <div class="filter-color">
-        <h3>Цвет</h3>
-        <p>
-          <label>
-            <input type="checkbox" name="color" value="black" checked>
-            Черный
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" name="color" value="white">
-            Белый
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" name="color" value="blue" checked>
-            Синий
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" name="color" value="red" checked>
-            Красный
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" name="color" value="pink">
-            Розовый
-          </label>
-        </p>
-      </div>
-        <div class="filter-bluetooth">
-          <h3>Bluetooth</h3>
-          <p>
-            <label>
-              <input type="radio" name="bluetooth" value="est'" checked>
-              есть
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="radio" name="Bluetooth" value="net">
-              нет
-            </label>
-          </p>
-        </div>
-        <button type="button" class="btn">показать</button>
-      </form>
-    </aside>
       </div>
     </div>
     <footer class="footer">

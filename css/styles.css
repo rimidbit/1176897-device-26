@@ -8,10 +8,10 @@
 }
 
 @font-face {
-  font-family: 'Open Sans light';
+  font-family: 'Open Sans';
   src: url('../fonts/opensanslight.woff2') format('woff2'),
   url('../fonts/opensanslight.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -20,23 +20,28 @@
   font-family: 'Gilroy';
   src: url('../fonts/gilroylight.woff2') format('woff2'),
   url('../fonts/gilroylight.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy Extra';
+  font-family: 'Gilroy';
   src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
   url('../fonts/gilroyextrabold.woff') format('woff');
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
-html, body {
+body {
   font-size: 15px;
-  font-family: Gilroy, Gilroy Extra, Open Sans light, "Open Sans";
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *, *::after, *::before {
@@ -74,7 +79,8 @@ img {
 
 .btn {
   font-size: 18px;
-  font-family: Gilroy Extra;
+  font-family: inherit;
+  font-weight: 800;
   text-transform: uppercase;
   border: none;
   position: relative;
@@ -84,6 +90,8 @@ img {
   color: #000;
   padding: 8px 25px;
   width: 200px;
+  letter-spacing: 4px;
+  background-color: transparent;
 }
 
 .btn::before {
@@ -104,7 +112,7 @@ img {
 
 .title-h3 {
   font-size: 47px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
 }
 
 .header .container {
@@ -119,6 +127,7 @@ img {
 
 .user-nav {
   display: flex;
+  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -130,19 +139,45 @@ img {
   margin-right: auto;
 }
 
+.user-nav_wrap {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .user-nav_cart {
   margin-left: 40px;
 }
 
-.user-nav_compare {
-  margin-left: 215px;
+.user-nav_cart::before {
+  content: url("../img/cart.svg");
+  margin-right: 10px;
+}
+
+.user-nav_compare::before {
+  content: url("../img/compare.svg");
+  margin-right: 10px;
+}
+
+.user-nav_login {
+  margin-right: auto;
+}
+
+.user-nav_login::before {
+  content: url("../img/user.svg");
+  margin-right: 10px;
+}
+
+.user-nav_login span {
+  color: #c1b075;
+  margin-left: 10px;
 }
 
 .nav {
   padding-bottom: 30px;
 }
 
-.nav ul {
+.nav_list {
   list-style: none;
   padding-left: 0;
   margin-top: 50px;
@@ -161,39 +196,41 @@ img {
   margin-left: 40px;
 }
 
-.nav .nav_category {
+.nav_category {
+  width: 200px;
+  font-size: 15px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav_category:first-child {
+  margin-right: 40px;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: flex-start;
   margin-top: 40px;
-  flex-wrap: wrap;
+  /*пока скрываем меню целиком потом надо переделать под наведение на первый пункт каталог товаров*/
+  display: none;
 }
 
 .nav_category li {
-  width: 190px;
   margin-bottom: 25px;
-  margin-right: 55px;
-}
-
-.nav_category li:nth-child(5) {
-  flex-grow: 1;
-}
-
-.nav_category li:last-child {
-  flex-grow: 1;
 }
 
 .nav_general, .footer_nav {
   font-size: 18px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
 .nav_general a {
   color: black;
-}
-
-.nav_category {
-  font-size: 15px;
-  font-family: Open Sans light;
-  text-transform: none;
 }
 
 .slider {
@@ -215,7 +252,7 @@ img {
 
 .popular {
   font-size: 18px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
 }
 
 .popular a {
@@ -256,10 +293,6 @@ img {
   padding-left: 0;
 }
 
-.services_nav button {
-  background-color: transparent;
-}
-
 .services_slide {
   display: flex;
   padding-right: 65px;
@@ -297,6 +330,10 @@ img {
   margin-bottom: 95px;
 }
 
+.info-item .btn {
+  width: 275px;
+}
+
 .info p {
   line-height: 2;
   margin-bottom: 50px;
@@ -304,7 +341,7 @@ img {
 
 .info-item_carriers {
   font-size: 16px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   margin: 80px 0;
 }
 
@@ -362,16 +399,33 @@ img {
   margin-left: 30px;
 }
 
+.footer-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_social-wrap::before {
+  content: '';
+  border: solid #ffc600;
+  border-width: 0 80px;
+  width: 80px;
+  height: 5px;
+  background-color: #ffc600;
+}
+
 /*catalog*/
 
 .h1-catalog {
   font-size: 47px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   margin-top: 45px;
   margin-bottom: 50px;
+  padding-left: 60px;
 }
 
 .bread-crumbs {
+  padding-left: 60px;
   margin-bottom: 55px;
 }
 
@@ -398,7 +452,7 @@ img {
 .sorting_name {
   margin: 0 40px;
   font-size: 16px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -423,31 +477,44 @@ img {
 }
 
 .products {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 50px;
+  margin-left: 70px;
+}
+
+.products_wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .products_item {
-  display: flex;
-  flex-direction: column;
   width: 360px;
-  margin: 20px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.products_item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .products_item_name {
   font-size: 18px;
-  font-family: Gilroy Extra;
-  order: 1;
+  font-weight: 800;
+  color: #000;
 }
 
-.products_item_name span {
+.products_wrap span {
   font-size: 16px;
-  font-family: Gilroy;
-  margin-left: 40px;
+  font-weight: 300;
 }
 
 .pages-nav {
+  margin-left: 70px;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -456,7 +523,7 @@ img {
   min-height: 70px;
   background-color: #ebebeb;
   font-size: 16px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -477,14 +544,14 @@ img {
 }
 
 .filters {
-  order: -1;
-  width: 265px;
-  padding-left: 60px;
+  max-width: 328px;
+  width: 100%;
 }
 
 .filters h2 {
+  padding-left: 60px;
   font-size: 16px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: #dbdbdb;
@@ -494,9 +561,13 @@ img {
   margin-top: 0;
 }
 
+.filters form {
+  padding-left: 60px;
+}
+
 .filters h3 {
   font-size: 16px;
-  font-family: Gilroy Extra;
+  font-weight: 800;
 }
 
 .filter-cost, .filter-color, .filter-bluetooth {
