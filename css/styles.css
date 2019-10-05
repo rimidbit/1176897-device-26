@@ -174,7 +174,7 @@ img {
 }
 
 .nav {
-  padding-bottom: 31px;
+  padding-bottom: 151px;
 }
 
 .nav_list {
@@ -212,13 +212,26 @@ img {
   margin-right: 40px;
 }
 
+.nav_general-catalog {
+  position: relative;
+}
+
 .nav_menu {
-  display: flex;
   align-items: flex-start;
-  margin-top: 40px;
   position: absolute;
-  /*пока скрываем меню целиком потом надо переделать под наведение на первый пункт каталог товаров*/
+  width: 1160px;
+  left: -60px;
+  top: 100%;
+  background-color: #f7e296;
+  z-index: 2;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 40px;
   display: none;
+}
+
+.nav_general-catalog:hover .nav_menu {
+  display: flex;
 }
 
 .nav_category li {
@@ -236,6 +249,14 @@ img {
   letter-spacing: 3.6px;
 }
 
+.nav_menu a {
+  letter-spacing: normal;
+}
+
+.slider {
+  margin-top: -125px;
+}
+
 .slider .slide_2 {
   display: none;
 }
@@ -243,6 +264,17 @@ img {
 .slide {
   display: flex;
   padding-left: 80px;
+  position: relative;
+}
+
+.slide_decor {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 179.2px;
+  color: white;
+  position: absolute;
+  right: 50px;
+  top: -9px;
 }
 
 .slide_text {
@@ -253,6 +285,7 @@ img {
   font-family: inherit;
   font-weight: 800;
   font-size: 47px;
+  margin-bottom: 30px;
 }
 
 .slide_head::before {
@@ -266,6 +299,11 @@ img {
 
 .slide_description {
   line-height: 2;
+  margin-bottom: 60px;
+}
+
+.slide .btn {
+  margin-bottom: 70px;
 }
 
 .slide_characteristics {
@@ -331,7 +369,9 @@ img {
 
 .services {
   background-color: #e5e5e5;
-  margin-top: 150px;
+  margin-top: 180px;
+  z-index: -1;
+  position: relative;
 }
 
 .services .container {
@@ -341,6 +381,34 @@ img {
 
 .services_nav {
   padding-left: 0;
+  width: 276px;
+  position: relative;
+}
+
+.services_nav::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 320px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  z-index: 2;
+}
+
+.services_nav li {
+  margin-bottom: 30px;
+}
+
+.btn-service-active {
+  background-color: black;
+  color: #f7e184;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  text-align: left;
+  width: 276px;
 }
 
 .services_slide {
