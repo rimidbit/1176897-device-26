@@ -174,26 +174,27 @@ img {
 }
 
 .nav {
-  padding-bottom: 30px;
+  padding-bottom: 31px;
 }
 
 .nav_list {
   list-style: none;
   padding-left: 0;
-  margin-top: 50px;
+  margin-top: 41px;
   display: flex;
 }
 
 .nav_general:first-child {
   flex-grow: 1;
+  position: relative;
 }
 
 .nav_general:last-child {
-  margin-left: 110px;
+  margin-left: 104px;
 }
 
 .nav_general:nth-child(3) {
-  margin-left: 40px;
+  margin-left: 34px;
 }
 
 .nav_category {
@@ -215,6 +216,7 @@ img {
   display: flex;
   align-items: flex-start;
   margin-top: 40px;
+  position: absolute;
   /*пока скрываем меню целиком потом надо переделать под наведение на первый пункт каталог товаров*/
   display: none;
 }
@@ -231,10 +233,58 @@ img {
 
 .nav_general a {
   color: black;
+  letter-spacing: 3.6px;
 }
 
-.slider {
+.slider .slide_2 {
   display: none;
+}
+
+.slide {
+  display: flex;
+  padding-left: 80px;
+}
+
+.slide_text {
+  margin-left: 120px;
+}
+
+.slide_head {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 47px;
+}
+
+.slide_head::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+.slide_description {
+  line-height: 2;
+}
+
+.slide_characteristics {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.slide_characteristics li {
+  margin-right: 80px;
+  font-size: 13px;
+}
+
+.slide_characteristics span {
+  display: block;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 36px;
+  margin-bottom: 25px;
 }
 
 .popular_items {
@@ -330,6 +380,15 @@ img {
   margin-bottom: 95px;
 }
 
+.info .title-h3::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: black;
+  margin-bottom: 50px;
+}
+
 .info-item .btn {
   width: 275px;
 }
@@ -374,10 +433,27 @@ img {
 
 .footer_logo {
   margin-right: auto;
+  fill: #ffc600;
 }
 
 .footer_user-nav_cart, .footer_user-nav_compare {
   margin-left: 40px;
+}
+
+.footer_user-nav_login::before {
+  content: url("../img/user.svg");
+  margin-right: 10px;
+}
+
+.footer_user-nav_compare::before {
+  content: url("../img/compare.svg");
+  margin-right: 10px;
+}
+
+.footer_user-nav_cart::before {
+  content: url("../img/cart.svg");
+  margin-right: 10px;
+  fill: #ffc600;
 }
 
 .footer_contacts {
@@ -396,22 +472,38 @@ img {
 }
 
 .footer_nav li {
-  margin-left: 30px;
+  margin-left: 40px;
+  letter-spacing: 4px;
 }
 
 .footer-img {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
 
-.footer_social-wrap::before {
+.footer-img::before {
   content: '';
-  border: solid #ffc600;
-  border-width: 0 80px;
+  display: block;
   width: 80px;
-  height: 5px;
+  height: 7px;
   background-color: #ffc600;
+  position: absolute;
+  top: 14px;
+}
+
+.footer_social-wrap {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer_social-wrap a {
+  margin-right: 20px;
+}
+
+.logo-html {
+  position: absolute;
+  right: 0;
+  fill: #ffc600;
 }
 
 /*catalog*/
