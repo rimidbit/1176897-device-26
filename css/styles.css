@@ -792,4 +792,6 @@ img {
 
 .pop-up-map {
   margin: auto;
+  width: 960px;
+  position: relative;
 }
