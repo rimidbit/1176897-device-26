@@ -285,19 +285,15 @@ img {
   margin-top: -112px;
 }
 
-.slider .slide_2 {
-  display: none;
-}
-
 .slide {
-  display: flex;
+  display: none;
   align-items: flex-start;
   padding-left: 90px;
   position: relative;
 }
 
 .slide_decor {
-  font-family: Gilroy;
+  font-family: inherit;
   font-weight: 800;
   font-size: 179.2px;
   color: white;
@@ -336,6 +332,52 @@ img {
   margin-bottom: 56px;
   padding: 8px 43px;
   width: 220px;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 324px;
+  right: 160px;
+  z-index: 20;
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider-controls label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#product-1:checked ~ .slider #slide1,
+#product-2:checked ~ .slider #slide2,
+#product-3:checked ~ .slider #slide3 {
+  display: flex;
+}
+
+#product-1:checked ~ .slider label::after[for="product-1"],
+#product-2:checked ~ .slider label::after[for="product-2"],
+#product-3:checked ~ .slider label::after[for="product-3"] {
+  opacity: 1;
 }
 
 .slide_characteristics {
