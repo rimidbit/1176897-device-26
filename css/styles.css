@@ -171,15 +171,16 @@ img {
 
 .search input {
   background-color: inherit;
-  border-bottom: 2px solid inherit;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid transparent;
   padding-left: 38px;
   padding-bottom: 6px;
   width: 355px;
 }
 
 .search input:focus {
-  outline: none;
-  border-bottom: 2px solid #000000;
+  border-color: #000000;
 }
 
 .search input:focus + button {
@@ -1088,10 +1089,9 @@ img {
 }
 
 .pop-up-message {
-  width: 960px;
-  margin: 0 auto;
   padding: 85px 100px;
-  position: relative;
+  background-color: #ffffff;
+  box-shadow: 2px 6px 10px 0 #d7d7d7, -2px 6px 10px 0 #d7d7d7;
 }
 
 .form-message {
@@ -1101,9 +1101,56 @@ img {
 
 .form-message input,
 .form-message textarea {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 20px;
-  border: none;
+  border: 2px solid transparent;
+  outline: none;
   font-size: 14px;
+}
+
+.form-message input {
+  width: 380px;
+}
+
+.form-message input::-webkit-input-placeholder,
+.form-message textarea::-webkit-input-placeholder {
+  color: #d9d9d9;
+}
+
+.form-message input:-ms-input-placeholder,
+.form-message textarea:-ms-input-placeholder {
+  color: #d9d9d9;
+}
+
+.form-message input::-ms-input-placeholder,
+.form-message textarea::-ms-input-placeholder {
+  color: #d9d9d9;
+}
+
+.form-message input:hover,
+.form-message textarea:hover {
+  background-color: #eaeaea;
+}
+
+.form-message input:focus,
+.form-message textarea:focus {
+  border-color: #f7e296;
+}
+
+.form-message input:focus::-webkit-input-placeholder,
+.form-message textarea:focus::-webkit-input-placeholder {
+  color: #464646;
+}
+
+.form-message input:focus:-ms-input-placeholder,
+.form-message textarea:focus:-ms-input-placeholder {
+  color: #464646;
+}
+
+.form-message input:focus::-ms-input-placeholder,
+.form-message textarea:focus::-ms-input-placeholder {
+  color: #464646;
 }
 
 .form_user-name span,
@@ -1112,10 +1159,6 @@ img {
   display: block;
   font-weight: 800;
   margin-bottom: 20px;
-}
-
-.form_user-mail {
-  margin-left: 240px;
 }
 
 .form_user-message {
@@ -1129,15 +1172,37 @@ img {
 
 .pop-up-close {
   border: none;
-  background-color: inherit;
+  outline: none;
+  background-color: transparent;
   position: absolute;
   top: 25px;
   right: 25px;
   z-index: 2;
 }
 
-.pop-up-map {
-  margin: auto;
-  width: 960px;
+.pop-up-close img {
+  opacity: 0.5;
+}
+
+.pop-up-close img:hover {
+  opacity: 1;
+}
+
+.pop-up-close img:active {
+  opacity: 0.3;
+}
+
+.pop-up-map,
+.pop-up-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+}
+
+.pop-up-wrap {
   position: relative;
+  height: 100vh;
 }
