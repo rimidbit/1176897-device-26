@@ -1185,40 +1185,36 @@ img {
   font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 4px;
 }
 
-.pages-nav a {
+.pages-nav_btn-text {
   color: #000000;
-  padding-top: 25px;
-  padding-right: 30px;
-  padding-bottom: 25px;
-  padding-left: 30px;
+  letter-spacing: 4px;
+  padding: 25px 30px;
 }
 
-.pages-nav a:hover {
+.pages-nav_btn-text:hover {
   background-color: #d9d9d9;
 }
 
-.pages-nav a:active {
+.pages-nav_btn-text:active {
   color: #979797;
 }
 
-.pages-nav a:last-child {
-  padding-right: 10px;
+.pages-nav_numbers {
+  max-width: 96px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.pages-nav_numbers {
-  padding-left: 0;
-  margin-left: 209px;
-  margin-right: 192px;
+.pages-nav_numbers ul{
   list-style: none;
+  padding-left: 0;
   display: flex;
-  letter-spacing: normal;
 }
 
 .pages-nav_numbers a {
-  padding: 20px;
+  padding: 14px;
   color: #b2b2b2;
 }
 
@@ -1257,7 +1253,6 @@ img {
   font-size: 18px;
   font-weight: 800;
   margin-top: 11px;
-  /* margin-bottom: 106px; */
 }
 
 .filter-cost, .filter-color, .filter-bluetooth {
@@ -1270,7 +1265,52 @@ img {
 }
 
 .filter-cost-head {
-  margin-bottom: 106px;
+  margin-bottom: 39px;
+}
+
+.cost-controls {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.cost-controls .scale {
+  height: 2px;
+  background-color: #dbdbdb;
+}
+
+.cost-controls .bar {
+  width: 60%;
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.cost-toggle {
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+
+.cost-toggle-min {
+  left: 0;
+}
+
+.cost-toggle-max {
+  left: 55%;
+}
+
+.price-controls {
+  color: #bebebe;
+  padding: 11px 0;
+}
+
+.max-price {
+  margin-left: 56px;
 }
 
 .filter-color {

@@ -82,6 +82,17 @@
           <form>
             <div class="filter-cost">
               <h3 class="filter-cost-head">Стоимость</h3>
+              <div class="cost-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="cost-toggle cost-toggle-min"></div>
+                <div class="cost-toggle cost-toggle-max"></div>
+                <div class="price-controls">
+                  <span class="min-price">от 0</span>
+                  <span class="max-price">до 5000</span>
+                </div>
+              </div>
             </div>
             <div class="filter-color">
               <h3>Цвет</h3>
@@ -176,13 +187,15 @@
             </li>
           </ul>
           <ul class="pages-nav">
-            <li><a href="#">назад</a> </li>
-            <ul class="pages-nav_numbers">
-              <li><a href="#">1</a> </li>
-              <li><a href="#">2</a> </li>
-              <li><a href="#">3</a> </li>
-            </ul>
-            <li><a href="#">вперед</a> </li>
+            <li><a class="pages-nav_btn-text" href="#">назад</a> </li>
+            <li class="pages-nav_numbers">
+              <ul>
+                <li><a href="#">1</a> </li>
+                <li><a href="#">2</a> </li>
+                <li><a href="#">3</a> </li>
+              </ul>
+            </li>
+            <li><a class="pages-nav_btn-text" href="#">вперед</a> </li>
           </ul>
         </main>
       </div>
