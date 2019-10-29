@@ -324,6 +324,10 @@ img {
 }
 
 .nav {
+  padding-bottom: 151px;
+}
+
+.nav-catalog {
   padding-bottom: 37px;
 }
 
@@ -815,8 +819,8 @@ img {
 .footer {
   background-color: #464646;
   color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 60px;
+  padding-top: 63px;
+  padding-bottom: 63px;
 }
 
 .footer a {
@@ -834,6 +838,10 @@ img {
   margin-top: 8px;
 }
 
+.footer_user-nav-general {
+  margin-top: -4px;
+}
+
 .footer_user-nav_cart {
   margin-left: 40px;
 }
@@ -844,6 +852,7 @@ img {
 
 .footer_user-nav_login span {
   margin-left: 18px;
+  color: #7e7e7e;
 }
 
 .footer_user-nav a {
@@ -986,6 +995,14 @@ img {
   color: #bcbcbc;
 }
 
+.bread-crumbs a:hover {
+  color: #666666;
+}
+
+.bread-crumbs a:active {
+  color: #e5e5e5;
+}
+
 .bread-crumbs img {
   margin: 0 9px;
 }
@@ -1031,12 +1048,29 @@ img {
   margin-right: 15px;
 }
 
+.sorting_categories a:hover {
+  color: #666666;
+}
+
+.sorting_categories a:active {
+  color: #000000;
+}
+
 .sorting_arrows-nav {
   margin-left: auto;
 }
 
 .sorting_arrows-nav a {
-  margin-left: 14px;
+  padding-left: 14px;
+  opacity: 0.2;
+}
+
+.sorting_arrows-nav a:hover {
+  opacity: 0.4;
+}
+
+.sorting_arrows-nav a:active {
+  opacity: 1;
 }
 
 .products {
@@ -1062,14 +1096,11 @@ img {
   margin-right: 40px;
   margin-bottom: 20px;
   margin-top: 20px;
+  position: relative;
 }
 
 .products_item:nth-child(2n) {
   margin-right: 0;
-}
-
-.products_item:nth-child(4) {
-  position: relative;
 }
 
 .products_item:nth-child(4)::after {
@@ -1088,6 +1119,48 @@ img {
   align-items: center;
 }
 
+.products_item-buttons {
+  display: none;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(238, 238, 238, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.products_item:hover > .products_item-buttons {
+  display: block;
+  transition: 0.3s;
+}
+
+.products_item-buttons .btn {
+  z-index: 5;
+  margin-top: 180px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.btn-compare {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 10px 0;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: #7f7f7f;
+}
+
+.btn-compare:hover {
+  color: #000;
+}
+
+.btn-compare:active {
+  color: #cccccc;
+}
+
 .products_item_name {
   font-size: 18px;
   font-weight: 800;
@@ -1101,12 +1174,11 @@ img {
 
 .pages-nav {
   margin-top: 0;
-  margin-bottom: 89px;
+  margin-bottom: 76px;
   margin-left: 70px;
   padding-left: 0;
   list-style: none;
   display: flex;
-  /*  justify-content: space-between;*/
   align-items: center;
   min-height: 70px;
   background-color: #ebebeb;
@@ -1117,8 +1189,19 @@ img {
 }
 
 .pages-nav a {
-  color: black;
-  padding: 20px 30px;
+  color: #000000;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+
+.pages-nav a:hover {
+  background-color: #d9d9d9;
+}
+
+.pages-nav a:active {
+  color: #979797;
 }
 
 .pages-nav a:last-child {
@@ -1136,6 +1219,16 @@ img {
 
 .pages-nav_numbers a {
   padding: 20px;
+  color: #b2b2b2;
+}
+
+.pages-nav_numbers a:hover {
+  background-color: transparent;
+  color: #666666;
+}
+
+.pages-nav_numbers a:active {
+  color: #000;
 }
 
 .filters {
@@ -1210,6 +1303,10 @@ img {
   border: 3px solid #000000;
 }
 
+.filter-color label:hover::before {
+  border-color: #606060;
+}
+
 .filter-color-input:checked + label::after {
   content: "";
   position: absolute;
@@ -1220,6 +1317,10 @@ img {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-color-input:checked + label:hover::after {
+  opacity: 0.7;
 }
 
 .filter-bluetooth p {
@@ -1244,6 +1345,10 @@ img {
   border-radius: 50%;
 }
 
+.filter-bluetooth label:hover::before {
+  border-color: #606060;
+}
+
 .filter-bluetooth-input:checked + label::after {
   content: "";
   position: absolute;
@@ -1253,6 +1358,10 @@ img {
   height: 9px;
   background-color: #000000;
   border-radius: 50%;
+}
+
+.filter-bluetooth-input:checked + label:hover::after {
+  background-color: #606060;
 }
 
 .filters .btn {
