@@ -281,16 +281,6 @@ img {
   color: #ac9e69;
 }
 
-.user-nav_wrap {
-  width: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
 .user-nav_cart {
   margin-left: 42px;
 }
@@ -322,7 +312,11 @@ img {
 }
 
 .user-nav_login {
-  margin-right: auto;
+  margin-right: 211px;
+}
+
+.login-catalog {
+  margin-right: 57px;
 }
 
 .user-nav_login::before {
@@ -765,14 +759,15 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 285px;
+  padding-top: 102px;
+  padding-bottom: 102px;
   padding-left: 15px;
 }
 
 .logotypes_img {
   position: relative;
   width: 25%;
-  height: 80px;
+  height: 81px;
 }
 
 .logotype_img,
@@ -840,7 +835,7 @@ img {
 }
 
 .info-item .btn {
-  width: 260px;
+  width: 261px;
 }
 
 .info-btn {
@@ -1087,6 +1082,12 @@ img {
   margin: 0 9px;
 }
 
+.content-wrap {
+  background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #eeeeee),color-stop(28%, #eeeeee),color-stop(28%, #eeeeee),to(#eeeeee));
+  background-image: -o-linear-gradient(left,#eeeeee 0,#eeeeee 28%,#eeeeee 28%,#eeeeee 100%);
+  background-image: linear-gradient(to right,#eeeeee 0,#eeeeee 28%,#eeeeee 28%,#eeeeee 100%);
+}
+
 .catalog_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1161,6 +1162,10 @@ img {
 
 .sorting_arrows-nav a:active {
   opacity: 1;
+}
+
+.main-catalog {
+  width: 832px;
 }
 
 .products {
@@ -1288,9 +1293,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-height: 70px;
   background-color: #ebebeb;
   font-size: 16px;
@@ -1299,6 +1301,7 @@ img {
 }
 
 .pages-nav_btn-text {
+  display: block;
   color: #000000;
   letter-spacing: 4px;
   padding: 25px 30px;
@@ -1314,6 +1317,7 @@ img {
 
 .pages-nav_numbers {
   max-width: 96px;
+  padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1343,23 +1347,7 @@ img {
 .filters {
   max-width: 328px;
   width: 100%;
-}
-
-.filters h2 {
-  padding-left: 60px;
-  font-size: 16px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #dbdbdb;
-  min-height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0;
+  background-color: #efefef;
 }
 
 .filters form {
