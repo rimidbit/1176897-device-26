@@ -1085,7 +1085,7 @@ img {
 .content-wrap {
   background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #eeeeee),color-stop(28%, #eeeeee),color-stop(28%, #eeeeee),to(#eeeeee));
   background-image: -o-linear-gradient(left,#eeeeee 0,#eeeeee 28%,#eeeeee 28%,#eeeeee 100%);
-  background-image: linear-gradient(to right,#eeeeee 0,#eeeeee 28%,#eeeeee 28%,#eeeeee 100%);
+  background-image: linear-gradient(to right,#eeeeee 0,#eeeeee 28%,#ffffff 28%,#ffffff 100%);
 }
 
 .catalog_wrap {
