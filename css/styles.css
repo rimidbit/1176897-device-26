@@ -259,7 +259,7 @@ img {
 }
 
 .user-nav {
-  font-family: "Open Sans";
+  font-family: Open Sans, Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,6 +508,11 @@ img {
 .slide_description {
   line-height: 2;
   margin-bottom: 45px;
+  padding-right: 70px;
+}
+
+.slide2 .slide_description, .slide-quadcopter .slide_description {
+  padding-right: 110px;
 }
 
 .slide .btn {
@@ -639,6 +644,10 @@ img {
   line-height: 1.4;
 }
 
+.popular_item_monopod {
+  width: 125px;
+}
+
 .popular_item_img {
   width: 160px;
   height: 160px;
@@ -751,6 +760,10 @@ img {
   line-height: 2;
 }
 
+.description-credit {
+  padding-right: 66px;
+}
+
 .logotypes .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,6 +862,18 @@ img {
   margin-bottom: 30px;
 }
 
+.info-item_choice {
+  width: 420px;
+}
+
+.info-item_delivery {
+  width: 490px;
+}
+
+.info-item_test {
+  width: 520px;
+}
+
 .info-item_carriers {
   font-size: 16px;
   font-weight: 800;
@@ -892,7 +917,7 @@ img {
 }
 
 .footer address {
-  font-family: "Open Sans";
+  font-family: Open Sans, Arial, sans-serif;
   font-style: normal;
 }
 
@@ -900,7 +925,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Open Sans";
+  font-family: Open Sans, Arial, sans-serif;
   margin-top: 8px;
 }
 
@@ -990,7 +1015,7 @@ img {
 }
 
 .footer_contacts p {
-  font-family: "Open Sans";
+  font-family: Open Sans, Arial, sans-serif;
 }
 
 .footer_nav a:hover {
@@ -1279,6 +1304,11 @@ img {
   font-size: 18px;
   font-weight: 800;
   color: #000;
+  padding-right: 20px;
+}
+
+.item_name-professional {
+  padding-right: 70px;
 }
 
 .products_wrap span {
