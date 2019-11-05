@@ -687,7 +687,7 @@ img {
 
 .services_nav {
   padding-left: 0;
-  width: 284px;
+  width: 502px;
   position: relative;
   margin-top: -10px;
 }
@@ -753,11 +753,14 @@ img {
 
 .services_slide img {
   margin-top: -24px;
-  margin-left: 142px;
+  margin-right: 138px;
 }
 
 .services_slide_text p {
   line-height: 2;
+  padding-right: 100px;
+  margin-right: 5px;
+  width: 550px;
 }
 
 .description-credit {
